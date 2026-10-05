@@ -30,7 +30,10 @@ header {
     gap: 50px;
     padding: 30px 50px;
     flex-wrap: wrap;
+    /* static : normal | relative : positionne selon les px choisis | Fixed : sort de la zone
+    | Sticky : mix entre fixed et absolue | absolute : sort de la zone et cherche son premier parent positionné (sinon sort de la zone)*/
     position: sticky;
+    z-index: 999;
     top: 0;
     background-color: #f6ded4;
     box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 5%);
@@ -165,6 +168,7 @@ h2 {
     start - end : direction du texte (suivant si la langue va de gauche à droite ou droite à gauche */
 }
 
+
 h2,
 p,
 ol {
@@ -182,6 +186,7 @@ table {
     margin: 50px auto;
     width: 90%;
     border-radius: 20px;
+    background-color: #f6ded4 !important;
 
 }
 
@@ -196,8 +201,8 @@ th {
 }
 
 thead {
-    background-color: #1f1f1d;
-    color: #f6ded4;
+    background-color: #1f1f1d !important;
+    color: #f6ded4 !important;
 }
 
 thead th:first-child {
@@ -217,11 +222,15 @@ table img {
 table .produits,
 table .category,
 table .prix {
-    text-align: center;
+    text-align: center !important;
 }
 
 #panier td {
     text-align: center;
+}
+
+#panier {
+    margin-bottom: 200px;
 }
 
 .table-container {
@@ -235,6 +244,8 @@ overflow: hidden; */
     border-radius: 20px;
     overflow: hidden;
 } */
+
+
 
 
 /* Css formulaire */
@@ -316,7 +327,7 @@ button {
 }
 
 button:hover {
-    text-decoration: underline;
+    text-decoration: none;
     background-color: #f6ded4;
     color: #1f1f1d;
     border: 1px solid #1f1f1d;
@@ -361,6 +372,18 @@ input:focus {
     margin: 20px auto;
     height: auto;
     text-align: center;
+    position: relative;
+}
+
+.badge {
+    background-color: orange;
+    color: white;
+    padding: 5px;
+    border-radius: 10%;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
 }
 
 .product-card h3 {
@@ -370,7 +393,6 @@ input:focus {
 
 .product-card span {
     font-weight: 600;
-    color: rgb(211, 34, 181);
 }
 
 .product-card p {
@@ -546,3 +568,62 @@ non dans une div interieur par exemple)
 :focus : élément sélectionné
 :active : pendant le clic
 */
+
+
+.product-detail-container {
+    padding: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
+.carousel {
+    flex: 1;
+}
+
+.carousel .d-block {
+    height: 500px;
+    object-fit: cover;
+}
+
+.product-detail {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .product-detail-container {
+        flex-direction: column;
+    }
+
+    .carousel,
+    .product-detail {
+        width: 100%;
+    }
+}
+
+.prix {
+    font-size: 18px;
+    font-weight: 800;
+    margin-top: 0;
+}
+
+.fa-cart-shopping {
+    font-size: 20px;
+}
+
+.button-ajout-panier {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.button-ajout-panier:hover {
+    text-decoration: none;
+}
