@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyShop - Mon panier</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
@@ -13,12 +15,12 @@
         <h1>Mon panier</h1>
         <!--créer une liste non-o-->
         <nav>
-            <ul>
+            <ul class="navigation">
                 <li>
                     <a href="../index.html">Accueil</a>
                 </li>
                 <li>
-                    <a href="about.html">A propos</a>
+                    <a href="about.html">À propos</a>
                 </li>
                 <li>
                     <a href="produits.html">Produits</a>
@@ -42,69 +44,82 @@
     <main>
         <section>
             <!--Liste produit format tableau-->
-            <table border="1">
-                <caption>Mon panier</caption>
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Produit</th>
-                        <th>Prix</th>
-                        <th>Quantité</th>
-                        <th>Total</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
+            <div class="table-container">
+                <table border="1" id="panier">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Produit</th>
+                            <th>Prix</th>
+                            <th>Quantité</th>
+                            <th>Total</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
 
-                <tbody>
-                    <tr>
-                        <td>#2648</td>
-                        <td>Illustration Pivoines</td>
-                        <td>9,00&nbsp;€</td>
-                        <td>1</td>
-                        <td>9,00&nbsp;€</td>
-                        <td><button type="button">Supprimer</button></td>
-                    </tr>
+                    <tbody>
+                        <tr>
+                            <td>#2648</td>
+                            <td>Illustration Pivoines</td>
+                            <td>9,00&nbsp;€</td>
+                            <td>1</td>
+                            <td>9,00&nbsp;€</td>
+                            <td><button type="button">Supprimer</button></td>
+                        </tr>
 
-                    <tr>
-                        <td>#2649</td>
-                        <td>Illustration Dragon</td>
-                        <td>9,00&nbsp;€</td>
-                        <td>2</td>
-                        <td>18,00&nbsp;€</td>
-                        <td><button type="button">Supprimer</button></td>
-                    </tr>
+                        <tr>
+                            <td>#2649</td>
+                            <td>Illustration Dragon</td>
+                            <td>9,00&nbsp;€</td>
+                            <td>2</td>
+                            <td>18,00&nbsp;€</td>
+                            <td><button type="button">Supprimer</button></td>
+                        </tr>
 
-                    <tr>
-                        <td>#2508</td>
-                        <td>Sticker lapin</td>
-                        <td>3,00&nbsp;€</td>
-                        <td>1</td>
-                        <td>3,00&nbsp;€</td>
-                        <td><button type="button">Supprimer</button></td>
-                    </tr>
+                        <tr>
+                            <td>#2508</td>
+                            <td>Sticker lapin</td>
+                            <td>3,00&nbsp;€</td>
+                            <td>1</td>
+                            <td>3,00&nbsp;€</td>
+                            <td><button type="button">Supprimer</button></td>
+                        </tr>
 
-                    <tr>
-                        <td colspan="4">Total du panier</td>
-                        <td>30,00&nbsp;€</td>
-                        <td>
-                            <button type="button">Commander</button>
-                        </td>
-                    </tr>
-                </tbody>
+                        <tr>
+                            <td colspan="4">Total du panier</td>
+                            <td>30,00&nbsp;€</td>
+                            <td>
+                                <button type="button">Commander</button>
+                            </td>
+                        </tr>
+                    </tbody>
 
-            </table>
+                </table>
+            </div>
         </section>
     </main>
 
 
     <!--pied de page-->
+    <!--pied de page-->
     <footer>
-        <p>&copy;2026 MyShop</p>
-        <a href="https://www.instagram.com" target="_blank">Instagram</a>
-        <a href="https://www.tiktok.com" target="_blank">TikTok</a>
-        <a href="mailto:contact@exemple.com" target="_blank">contact@exemple.com</a>
-        <a href="tel:+33102030405" target="_blank">+33 1 02 03 04 05</a>
-        <a href="../assets/pdf/mentions-legales.pdf" download>Mentions légales</a>
+        <div>
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fa-brands fa-instagram logo-rs"></i>
+            </a>
+            <a href="https://www.tiktok.com" target="_blank">
+                <i class="fa-brands fa-tiktok logo-rs"></i>
+            </a>
+        </div>
+
+        <div class="contact">
+            <a href="mailto:contact@exemple.com" target="_blank">
+                <i class="fa-regular fa-envelope logo-contact"></i>contact@exemple.com</a>
+            <a href="tel:+33102030405" target="_blank">
+                <i class="fa-solid fa-phone logo-contact"></i>+33 1 02 03 04 05</a>
+            <a href="assets/pdf/mentions-legales.pdf" download>Mentions légales</a>
+        </div>
+        <p class="copyright">&copy;2026 MyShop</p>
     </footer>
 </body>
 

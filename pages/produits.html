@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyShop - Nos produits</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
@@ -13,12 +15,12 @@
         <h1>My Shop</h1>
         <!--créer une liste non-o-->
         <nav>
-            <ul>
+            <ul class="navigation">
                 <li>
                     <a href="../index.html">Accueil</a>
                 </li>
                 <li>
-                    <a href="about.html">A propos</a>
+                    <a href="about.html">À propos</a>
                 </li>
                 <li>
                     <a href="produits.html">Produits</a>
@@ -42,113 +44,138 @@
         <section>
             <h2>Catégories</h2>
 
-            <!--créer une liste o-->
+            <div class="category-container">
+                <a href="#illustrations" class="category-card">
+                    <img class="img-category" src="../assets/images/print-pivoines.png" alt="Catégorie prints">
+                    <p>Prints</p>
+                </a>
+                <a href="#stickers" class="category-card">
+                    <img class="img-category" src="../assets/images/stickers-lapin.png" alt="Catégorie stickers">
+                    <p>Stickers</p>
+                </a>
+                <a class="category-card">
+                    <img class="img-category" src="../assets/images/stickers-renard.png" alt="Catégorie Marques page">
+                    <p>Marques page</p>
+                </a>
+            </div>
+            <!-- créer une liste o
             <ol>
-                <li>Illustrations</li>
-                <li>Stickers</li>
-            </ol>
+                <li><a href="#illustrations">Illustrations</a></li>
+                <li><a href="#stickers">Stickers</a></li>
+            </ol> -->
         </section>
 
         <section>
             <!--Liste produit format tableau-->
-            <table border="1">
-                <caption>Nos produits</caption>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Catégorie</th>
+                            <th>Produit</th>
+                            <th>Image</th>
+                            <th>Description</th>
+                            <th>Prix</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
 
-                <thead>
-                    <tr>
-                        <th>Catégorie</th>
-                        <th>Produit</th>
-                        <th>Image</th>
-                        <th>Description</th>
-                        <th>Prix</th>
-                        <th>Action</th>
-                    </tr>
-                </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="3" class="category">Illustration</td>
+                            <td class="produits">Pivoines</td>
+                            <td>
+                                <img src="../assets/images/print-pivoines.png" alt="Print illustration Pivoines">
+                            </td>
+                            <td>Maecenas elit libero, rutrum sit amet massa ut, feugiat tincidunt nisi.</td>
+                            <td class="prix">9,00&nbsp;€</td>
+                            <td><button type="button">Acheter</button></td>
+                        </tr>
 
-                <tbody>
-                    <tr>
-                        <td rowspan="3">Illustration</td>
-                        <td>Pivoines</td>
-                        <td>
-                            <img src="../assets/images/print-pivoines.png" alt="Print illustration Pivoines"
-                                height="150">
-                        </td>
-                        <td>Maecenas elit libero, rutrum sit amet massa ut, feugiat tincidunt nisi.</td>
-                        <td>9,00&nbsp;€</td>
-                        <td><button type="button">Acheter</button></td>
-                    </tr>
+                        <tr>
+                            <td class="produits">Chevalier</td>
+                            <td>
+                                <img src="../assets/images/print-chevalier.png" alt="Print illustration Chevalier">
+                            </td>
+                            <td>Donec tincidunt nisi at laoreet dapibus. Nunc vestibulum dictum nulla, vel maximus odio
+                                eleifend
+                                id.
+                            </td>
+                            <td class="prix">9,00&nbsp;€</td>
+                            <td><button type="button">Acheter</button></td>
+                        </tr>
 
-                    <tr>
-                        <td>Chevalier</td>
-                        <td>
-                            <img src="../assets/images/print-chevalier.png" alt="Print illustration Chevalier"
-                                height="150">
-                        </td>
-                        <td>Donec tincidunt nisi at laoreet dapibus. Nunc vestibulum dictum nulla, vel maximus odio
-                            eleifend
-                            id.
-                        </td>
-                        <td>9,00&nbsp;€</td>
-                        <td><button type="button">Acheter</button></td>
-                    </tr>
+                        <tr>
+                            <td class="produits">Dragon</td>
+                            <td>
+                                <img src="../assets/images/print-dragon.png" alt="Print illustration Dragon">
+                            </td>
+                            <td>Cras eu dictum ipsum, sed porttitor diam. Donec sem eros, vestibulum sit amet feugiat
+                                sit
+                                amet,
+                                suscipit
+                                in tortor.</td>
+                            <td class="prix">10,50&nbsp;€</td>
+                            <td><button type="button">Précommander</button></td>
+                        </tr>
 
-                    <tr>
-                        <td>Dragon</td>
-                        <td>
-                            <img src="../assets/images/print-dragon.png" alt="Print illustration Dragon" height="150">
-                        </td>
-                        <td>Cras eu dictum ipsum, sed porttitor diam. Donec sem eros, vestibulum sit amet feugiat sit
-                            amet,
-                            suscipit
-                            in tortor.</td>
-                        <td>10,50&nbsp;€</td>
-                        <td><button type="button">Précommander</button></td>
-                    </tr>
+                        <tr>
+                            <td>Promotion</td>
+                            <td colspan="4">-20&nbsp;% sur toutes les illustrations</td>
+                            <td>
+                                <button type="button">En profiter</button>
+                            </td>
+                        </tr>
 
-                    <tr>
-                        <td>Promotion</td>
-                        <td colspan="4">-20&nbsp;% sur toutes les illustrations</td>
-                        <td>
-                            <button type="button">En profiter</button>
-                        </td>
-                    </tr>
+                        <tr>
+                            <td rowspan="2" class="category">Stickers</td>
+                            <td class="produits">Lapin</td>
+                            <td>
+                                <img src="../assets/images/stickers-lapin.png" alt="Sticekrs lapin">
+                            </td>
+                            <td>Maecenas elit libero, rutrum sit amet massa ut, feugiat tincidunt nisi.</td>
+                            <td class="prix">3,00&nbsp;€</td>
+                            <td><button type="button">Acheter</button></td>
+                        </tr>
 
-                    <tr>
-                        <td rowspan="2">Stickers</td>
-                        <td>Lapin</td>
-                        <td>
-                            <img src="../assets/images/stickers-lapin.png" alt="Sticekrs lapin" height="150">
-                        </td>
-                        <td>Maecenas elit libero, rutrum sit amet massa ut, feugiat tincidunt nisi.</td>
-                        <td>3,00&nbsp;€</td>
-                        <td><button type="button">Acheter</button></td>
-                    </tr>
+                        <tr>
+                            <td class="produits">Renard</td>
+                            <td>
+                                <img src="../assets/images/stickers-renard.png" alt="Sticekrs renard">
+                            </td>
+                            <td>Maecenas elit libero, rutrum sit amet massa ut, feugiat tincidunt nisi.</td>
+                            <td class="prix">3,00&nbsp;€</td>
+                            <td><button type="button">Acheter</button></td>
+                        </tr>
+                    </tbody>
 
-                    <tr>
-                        <td>Renard</td>
-                        <td>
-                            <img src="../assets/images/stickers-renard.png" alt="Sticekrs renard" height="150">
-                        </td>
-                        <td>Maecenas elit libero, rutrum sit amet massa ut, feugiat tincidunt nisi.</td>
-                        <td>3,00&nbsp;€</td>
-                        <td><button type="button">Acheter</button></td>
-                    </tr>
-                </tbody>
-
-            </table>
+                </table>
+            </div>
 
         </section>
     </main>
 
 
     <!--pied de page-->
+    <!--pied de page-->
     <footer>
-        <p>&copy;2026 MyShop</p>
-        <a href="https://www.instagram.com" target="_blank">Instagram</a>
-        <a href="https://www.tiktok.com" target="_blank">TikTok</a>
-        <a href="mailto:contact@exemple.com" target="_blank">contact@exemple.com</a>
-        <a href="tel:+33102030405" target="_blank">+33 1 02 03 04 05</a>
-        <a href="../assets/pdf/mentions-legales.pdf" download>Mentions légales</a>
+        <div>
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fa-brands fa-instagram logo-rs"></i>
+            </a>
+            <a href="https://www.tiktok.com" target="_blank">
+                <i class="fa-brands fa-tiktok logo-rs"></i>
+            </a>
+        </div>
+
+        <div class="contact">
+            <a href="mailto:contact@exemple.com" target="_blank">
+                <i class="fa-regular fa-envelope logo-contact"></i>contact@exemple.com</a>
+            <a href="tel:+33102030405" target="_blank">
+                <i class="fa-solid fa-phone logo-contact"></i>+33 1 02 03 04 05</a>
+            <a href="assets/pdf/mentions-legales.pdf" download>Mentions légales</a>
+        </div>
+        <p class="copyright">&copy;2026 MyShop</p>
     </footer>
 </body>
 

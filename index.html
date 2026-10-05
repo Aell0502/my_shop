@@ -5,20 +5,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MyShop</title>
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <!--balise font awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
 
 <body>
     <header>
         <!--Titre principal-->
-        <h1>My Shop</h1>
+        <h1 id="toppage">My Shop</h1>
         <!--créer une liste non-o-->
         <nav>
-            <ul>
+            <ul class="navigation">
                 <li>
                     <a href="index.html">Accueil</a>
                 </li>
                 <li>
-                    <a href="pages/about.html">A propos</a>
+                    <a href="pages/about.html">À propos</a>
                 </li>
                 <li>
                     <a href="pages/produits.html">Produits</a>
@@ -41,7 +52,7 @@
 
     <main>
         <section>
-            <h2 id="toppage">Bienvenue sur notre boutique !</h2>
+            <h2>Bienvenue sur notre boutique !</h2>
             <p>My Shop est une boutique de vente en ligne d'illustrations.<br>
                 Découvrez <span>nos illustrations, stickers, papeterie</span> et profitez de nos promotions
             </p>
@@ -50,11 +61,25 @@
         <section>
             <h2>Catégories</h2>
 
-            <!--créer une liste o-->
+            <div class="category-container">
+                <a href="#illustrations" class="category-card">
+                    <img class="img-category" src="assets/images/print-pivoines.png" alt="Catégorie prints">
+                    <p>Prints</p>
+                </a>
+                <a href="#stickers" class="category-card">
+                    <img class="img-category" src="assets/images/stickers-lapin.png" alt="Catégorie stickers">
+                    <p>Stickers</p>
+                </a>
+                <a class="category-card">
+                    <img class="img-category" src="assets/images/stickers-renard.png" alt="Catégorie Marques page">
+                    <p>Marques page</p>
+                </a>
+            </div>
+            <!-- créer une liste o
             <ol>
                 <li><a href="#illustrations">Illustrations</a></li>
                 <li><a href="#stickers">Stickers</a></li>
-            </ol>
+            </ol> -->
         </section>
 
         <!-- créer une liste de définition
@@ -66,77 +91,121 @@
     </dl> -->
         <section>
             <h2 id="illustrations">Nos illustrations</h2>
-            <article>
-                <!--Porduit 1-->
-                <h3>Illustration Pivoines</h3>
-                <img src="assets/images/print-pivoines.png" alt="Print illustration Pivoines" height="350">
-                <p>Maecenas elit libero, rutrum sit amet massa ut, feugiat tincidunt nisi.</p>
-                <p>Prix : 9,00&nbsp;€</p>
-                <button type="button">Acheter</button>
-            </article>
+            <div class="product-container"> <!--flex container-->
+                <article class="product-card"> <!--flex item-->
+                    <!--Porduit 1-->
+                    <h3>Illustration Pivoines</h3>
+                    <img class="img-home" src="assets/images/print-pivoines.png" alt="Print illustration Pivoines">
+                    <p>Maecenas elit libero, rutrum sit amet massa ut, feugiat tincidunt nisi.</p>
+                    <p class="prix">9,00&nbsp;€</p>
+                    <button type="button">Acheter</button>
+                </article>
 
-            <article>
-                <!--Porduit 2-->
-                <h3>Illustration Chevalier</h3>
-                <img src="assets/images/print-chevalier.png" alt="Print illustration Chevalier" height="350">
-                <p>Donec tincidunt nisi at laoreet dapibus. Nunc vestibulum dictum nulla, vel maximus odio eleifend id.
-                </p>
-                <p>Prix : 9,00&nbsp;€</p>
-                <button type="button">Acheter</button>
-            </article>
+                <article class="product-card"> <!--flex item-->
+                    <!--Porduit 2-->
+                    <h3>Illustration Chevalier</h3>
+                    <img class="img-home" src="assets/images/print-chevalier.png" alt="Print illustration Chevalier">
+                    <p>Donec tincidunt nisi at laoreet dapibus. <span>vestibulum dictum nulla</span>, vel maximus odio
+                        eleifend id.
+                    </p>
+                    <p class="prix">9,00&nbsp;€</p>
+                    <button type="button">Acheter</button>
+                </article>
 
-            <article>
-                <!--Porduit 3-->
-                <h3>Illustration Dragon</h3>
-                <img src="assets/images/print-dragon.png" alt="Print illustration Dragon" height="350">
-                <p>Cras eu dictum ipsum, sed porttitor diam.<br>
-                    Donec sem eros, vestibulum sit amet feugiat sit amet, suscipit in tortor.</p>
-                <p>Prix : 10,50&nbsp;€</p>
-                <button type="button">Précommander</button>
-            </article>
+                <article class="product-card"> <!--flex item-->
+                    <!--Porduit 3-->
+                    <h3>Illustration Dragon</h3>
+                    <img class="img-home" src="assets/images/print-dragon.png" alt="Print illustration Dragon">
+                    <p>Cras eu dictum ipsum, sed porttitor diam.<br>
+                        Donec sem eros, vestibulum sit amet feugiat sit amet, suscipit in tortor.</p>
+                    <p class="prix">10,50&nbsp;€</p>
+                    <button type="button">Précommander</button>
+                </article>
+                <article class="product-card"> <!--flex item-->
+                    <!--Porduit 3-->
+                    <h3>Illustration Dragon</h3>
+                    <img class="img-home" src="assets/images/print-dragon.png" alt="Print illustration Dragon">
+                    <p>Cras eu dictum ipsum, sed porttitor diam.<br>
+                        Donec sem eros, vestibulum sit amet feugiat sit amet, suscipit in tortor.</p>
+                    <p class="prix">10,50&nbsp;€</p>
+                    <button type="button">Précommander</button>
+                </article>
+                <article class="product-card product-5"> <!--flex item-->
+                    <!--Porduit 2-->
+                    <h3>Illustration Chevalier</h3>
+                    <img class="img-home" src="assets/images/print-chevalier.png" alt="Print illustration Chevalier">
+                    <p>Donec tincidunt nisi at laoreet dapibus. <span>vestibulum dictum nulla</span>, vel maximus odio
+                        eleifend id.
+                    </p>
+                </article>
+            </div>
         </section>
 
         <section>
             <h2 id="stickers">Nos stickers</h2>
-            <article>
-                <!--Porduit 1-->
-                <h3>Stickers lapin</h3>
-                <img src="assets/images/stickers-lapin.png" alt="Stickers lapin" height="350">
-                <p>Maecenas elit libero, rutrum sit amet massa ut, feugiat tincidunt nisi.</p>
-                <p>Prix : 3,00&nbsp;€</p>
-                <button type="button">Acheter</button>
-            </article>
+            <div class="product-container">
+                <article class="product-card">
+                    <!--Porduit 1-->
+                    <h3>Stickers lapin</h3>
+                    <img class="img-home" src="assets/images/stickers-lapin.png" alt="Stickers lapin">
+                    <p>Maecenas elit libero, rutrum sit amet massa ut, feugiat tincidunt nisi.</p>
+                    <p class="prix">3,00&nbsp;€</p>
+                    <button type="button">Acheter</button>
+                </article>
 
-            <article>
-                <!--Porduit 2-->
-                <h3>Stickers renard</h3>
-                <img src="assets/images/stickers-renard.png" alt="Sticker renard" height="350">
-                <p>Donec tincidunt nisi at laoreet dapibus. Nunc vestibulum dictum nulla, vel maximus odio eleifend id.
-                </p>
-                <p>Prix : 3,00&nbsp;€</p>
-                <button type="button">Acheter</button>
-            </article>
+                <article class="product-card">
+                    <!--Porduit 2-->
+                    <h3>Stickers renard</h3>
+                    <img class="img-home" src="assets/images/stickers-renard.png" alt="Sticker renard">
+                    <p>Donec tincidunt nisi at laoreet dapibus. Nunc vestibulum dictum nulla, vel maximus odio eleifend
+                        id.
+                    </p>
+                    <p class="prix">3,00&nbsp;€</p>
+                    <button type="button">Acheter</button>
+                </article>
+            </div>
 
         </section>
 
         <!--Contenu complémentaire-->
-        <aside>
-            <h2>Promotions</h2>
-            <p>-20 % sur les illustrations !</p>
-            <a href="#toppage">Haut de page</a>
+        <aside class="promotion-container">
+            <div class="promotion-text">
+                <h2>Promotions</h2>
+                <p>-20 % sur les illustrations !</p>
+            </div>
+            <div class="promotion-cta">
+                <button>J'en profite</button>
+            </div>
         </aside>
 
+
+        <section class="top-page">
+            <a href="#toppage">
+                <i class="fa-solid fa-arrow-up-long"></i>
+            </a>
+        </section>
     </main>
 
 
     <!--pied de page-->
     <footer>
-        <p>&copy;2026 MyShop</p>
-        <a href="https://www.instagram.com" target="_blank">Instagram</a>
-        <a href="https://www.tiktok.com" target="_blank">TikTok</a>
-        <a href="mailto:contact@exemple.com" target="_blank">contact@exemple.com</a>
-        <a href="tel:+33102030405" target="_blank">+33 1 02 03 04 05</a>
-        <a href="assets/pdf/mentions-legales.pdf" download>Mentions légales</a>
+        <div>
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fa-brands fa-instagram logo-rs"></i>
+            </a>
+            <a href="https://www.tiktok.com" target="_blank">
+                <i class="fa-brands fa-tiktok logo-rs"></i>
+            </a>
+        </div>
+
+        <div class="contact">
+            <a href="mailto:contact@exemple.com" target="_blank">
+                <i class="fa-regular fa-envelope logo-contact"></i>contact@exemple.com</a>
+            <a href="tel:+33102030405" target="_blank">
+                <i class="fa-solid fa-phone logo-contact"></i>+33 1 02 03 04 05</a>
+            <a href="assets/pdf/mentions-legales.pdf" download>Mentions légales</a>
+        </div>
+        <p class="copyright">&copy;2026 MyShop</p>
     </footer>
 
 </body>

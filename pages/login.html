@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Shop - Connexion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
@@ -13,12 +15,12 @@
         <h1>Connexion</h1>
         <!--créer une liste non-o-->
         <nav>
-            <ul>
+            <ul class="navigation">
                 <li>
                     <a href="../index.html">Accueil</a>
                 </li>
                 <li>
-                    <a href="about.html">A propos</a>
+                    <a href="about.html">À propos</a>
                 </li>
                 <li>
                     <a href="produits.html">Produits</a>
@@ -41,9 +43,9 @@
 
     <main>
         <section>
-            <form method="post">
+            <form class="formulaire" method="post">
                 <h2>Me connecter</h2>
-                <fieldset>
+                <fieldset class="personnal-info">
                     <legend>Informations de connexion</legend>
                     <div>
                         <label for="email">Email :</label>
@@ -55,27 +57,36 @@
                         <input type="password" id="pwd" placeholder="Votre mot de passe" required>
                     </div>
 
-                    <div>
-                        <label for="pwd">Confirmez votre mot de passe</label>
-                        <input type="password" id="confirm-pwd" placeholder="Votre mot de passe" required>
-                    </div>
-
                 </fieldset>
 
-                <button type="submit">Me connecter</button>
+                <div class="button-form">
+                    <button type="submit">Me connecter</button>
+                </div>
+                <p>Pas encore de compte ? <a href="signup.html">Créer mon compte.</a></p>
             </form>
-            <p>Pas encore de compte ? <a href="signup.html">Créer mon compte.</a></p>
         </section>
     </main>
 
 
+    <!--pied de page-->
     <footer>
-        <p>&copy;2026 MyShop</p>
-        <a href="https://www.instagram.com" target="_blank">Instagram</a>
-        <a href="https://www.tiktok.com" target="_blank">TikTok</a>
-        <a href="mailto:contact@exemple.com" target="_blank">contact@exemple.com</a>
-        <a href="tel:+33102030405" target="_blank">+33 1 02 03 04 05</a>
-        <a href="../assets/pdf/mentions-legales.pdf" download>Mentions légales</a>
+        <div>
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fa-brands fa-instagram logo-rs"></i>
+            </a>
+            <a href="https://www.tiktok.com" target="_blank">
+                <i class="fa-brands fa-tiktok logo-rs"></i>
+            </a>
+        </div>
+
+        <div class="contact">
+            <a href="mailto:contact@exemple.com" target="_blank">
+                <i class="fa-regular fa-envelope logo-contact"></i>contact@exemple.com</a>
+            <a href="tel:+33102030405" target="_blank">
+                <i class="fa-solid fa-phone logo-contact"></i>+33 1 02 03 04 05</a>
+            <a href="assets/pdf/mentions-legales.pdf" download>Mentions légales</a>
+        </div>
+        <p class="copyright">&copy;2026 MyShop</p>
     </footer>
 </body>
 

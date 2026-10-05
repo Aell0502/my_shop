@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Shop - Inscription</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
 </head>
 
 <body>
@@ -13,12 +15,12 @@
         <h1>Inscription</h1>
         <!--créer une liste non-o-->
         <nav>
-            <ul>
+            <ul class="navigation">
                 <li>
                     <a href="../index.html">Accueil</a>
                 </li>
                 <li>
-                    <a href="about.html">A propos</a>
+                    <a href="about.html">À propos</a>
                 </li>
                 <li>
                     <a href="produits.html">Produits</a>
@@ -44,17 +46,19 @@
     POST : Créer / ajouter des données (log in, subscription...)-->
     <main>
         <section>
-            <form method="post">
-                <h2>Inscription</h2>
 
-                <fieldset>
+            <form class="formulaire" method="post">
+                <h2>Créer mon compte</h2>
+
+                <fieldset class="fieldset-signup personnal-info">
                     <legend>Informations personnelles</legend>
                     <div>
                         <label for="name">Nom :</label>
-                        <input id="name" placeholder="Votre nom" required>
-
+                        <input type="text" id="name" placeholder="Votre nom" required>
+                    </div>
+                    <div>
                         <label for="prenom">Prénom :</label>
-                        <input id="prenom" placeholder="Votre prénom" required>
+                        <input type="text" id="prenom" placeholder="Votre prénom" required>
                     </div>
 
                     <div>
@@ -63,35 +67,35 @@
                     </div>
 
                     <div>
-                        <label for="pwd">Mot de passe</label>
+                        <label for="pwd">Mot de passe :</label>
                         <input type="password" id="pwd" placeholder="Votre mot de passe" required>
                     </div>
 
                     <div>
-                        <label for="pwd">Confirmez votre mot de passe</label>
+                        <label for="pwd">Confirmez votre mot de passe :</label>
                         <input type="password" id="confirm-pwd" placeholder="Votre mot de passe" required>
                     </div>
                 </fieldset>
 
-                <fieldset>
+                <fieldset class="fieldset-signup">
                     <legend>Informations suplémentaires</legend>
                     <!--radio-->
                     <div>
                         <label>Genre :</label>
                         <input type="radio" id="femme" name="Genre" value="femme">
-                        <label for="femme">femme</label>
+                        <label for="femme">Femme</label>
 
                         <input type="radio" id="homme" name="Genre" value="homme">
-                        <label for="homme">homme</label>
+                        <label for="homme">Homme</label>
 
                         <input type="radio" id="autre" name="Genre" value="autre">
-                        <label for="femme">Autre</label>
+                        <label for="autre">Autre</label>
                     </div>
 
 
                     <!--checkbox-->
                     <div>
-                        <label>Intérêts</label>
+                        <label>Intérêts :</label>
                         <input type="checkbox" name="interets" id="illustration" value="illustration">
                         <label for="illustration">Illustration</label>
 
@@ -104,35 +108,52 @@
 
                     <div>
                         <!--liste deroulante-->
-                        <label for="pays">Pays</label>
-                        <select name="oays" id="pays">
+                        <label for="pays">Pays :</label>
+                        <select name="pays" id="pays">
                             <option value="france">France</option>
                             <option value="allemagne">Allemagne</option>
                             <option value="espagne">Espagne</option>
                         </select>
                     </div>
 
+                    <div>
+                        <input type="checkbox" name="cgv" id="cgv" value="cgv" required>
+                        <label class="cgv-news" for="cgv">J'accepte les conditions d'utilisation</label><br>
 
-                    <input type="checkbox" name="cgv" id="cgv" value="cgv" required>
-                    <label for="cgv">J'accepte les conditions d'utilisation</label><br>
+                        <input type="checkbox" name="newsletter" id="newsletter" value="newsletter">
+                        <label class="cgv-news" for="newsletter">Je souhaite recevoir des offres et bons
+                            plan</label><br>
+                    </div>
 
-                    <input type="checkbox" name="newsletter" id="newsletter" value="newsletter">
-                    <label for="newsletter">Je souhaite recevoir des offres et bons plan</label><br>
                 </fieldset>
 
-                <button type="submit">S'inscrire</button>
+                <div class="button-form">
+                    <button type="submit">S'inscrire</button>
+                </div>
             </form>
-            </section>
+        </section>
     </main>
 
 
+    <!--pied de page-->
     <footer>
-        <p>&copy;2026 MyShop</p>
-        <a href="https://www.instagram.com" target="_blank">Instagram</a>
-        <a href="https://www.tiktok.com" target="_blank">TikTok</a>
-        <a href="mailto:contact@exemple.com" target="_blank">contact@exemple.com</a>
-        <a href="tel:+33102030405" target="_blank">+33 1 02 03 04 05</a>
-        <a href="../assets/pdf/mentions-legales.pdf" download>Mentions légales</a>
+        <div>
+            <a href="https://www.instagram.com" target="_blank">
+                <i class="fa-brands fa-instagram logo-rs"></i>
+            </a>
+            <a href="https://www.tiktok.com" target="_blank">
+                <i class="fa-brands fa-tiktok logo-rs"></i>
+            </a>
+        </div>
+
+        <div class="contact">
+            <a href="mailto:contact@exemple.com" target="_blank">
+                <i class="fa-regular fa-envelope logo-contact"></i>contact@exemple.com</a>
+            <a href="tel:+33102030405" target="_blank">
+                <i class="fa-solid fa-phone logo-contact"></i>+33 1 02 03 04 05</a>
+            <a href="assets/pdf/mentions-legales.pdf" download>Mentions légales</a>
+        </div>
+        <p class="copyright">&copy;2026 MyShop</p>
     </footer>
 </body>
 

@@ -1,0 +1,548 @@
+/* Sélecteur universel */
+* {
+    margin: 0;
+    padding: 0;
+    /* content-box : comportement CSS par défaut
+    à modifier par border-box pour que les largeurs etc prennent en compte les paddings, margins... */
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Permet une remontée fluide au clic plutôt qu'un saut direct */
+}
+
+body {
+    background-color: #f6ded4;
+    color: #1f1f1d;
+    font-family: 'Noto Sans', arial, sans-serif;
+    font-size: 14px;
+}
+
+/* h1 {
+    margin-top: 50px;
+} */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+    padding: 30px 50px;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    background-color: #f6ded4;
+    box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 5%);
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    header ul {
+        column-gap: 20px;
+        row-gap: 10px;
+        margin: 20px 0px;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        justify-content: center;
+        gap: 10px;
+    }
+}
+
+/* @media (max-width: 768px) {
+    header ul {
+        flex-direction: column;
+        Empile les éléments verticalement 
+        align-items: center;
+        Centre chaque lien horizontalement
+        gap: 5px;
+    }
+} */
+
+header a {
+    text-decoration: none;
+    color: #1f1f1d;
+}
+
+header a:hover {
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+
+footer {
+    background-color: #1f1f1d;
+    color: #f6ded4;
+    text-align: center;
+    padding: 25px 0;
+
+}
+
+footer a {
+    text-decoration: none;
+    color: #f6ded4;
+    margin: 10px;
+}
+
+footer .contact a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.copyright {
+    font-size: 12px;
+}
+
+footer div {
+    margin-bottom: 20px;
+}
+
+.logo-rs {
+    font-size: 25px;
+}
+
+.logo-rs:hover,
+.logo-contact:hover {
+    text-decoration: none;
+    color: rgb(255, 179, 242);
+}
+
+.fa-brands:active {
+    font-size: 30px;
+}
+
+footer .contact a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+main {
+    max-width: 1600px;
+    width: 100%;
+    /* Prend toute la largeur sur mobile */
+    margin: 0 auto;
+    /* Centre le main horizontalement */
+    padding: 0 10px;
+    /* Sécurité : évite que le texte colle aux bords sur mobile */
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+a:focus {
+    border: 1px solid black;
+    font-weight: 600;
+}
+
+section {
+    margin-top: 50px;
+}
+
+.img-home {
+    height: 350px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 26px;
+    /* left - right : direction fixe
+    start - end : direction du texte (suivant si la langue va de gauche à droite ou droite à gauche */
+}
+
+h2,
+p,
+ol {
+    margin-bottom: 10px;
+}
+
+ol {
+    list-style: none;
+}
+
+/* tableau */
+table {
+    border-collapse: collapse;
+    /* Fusionne les bordures */
+    margin: 50px auto;
+    width: 90%;
+    border-radius: 20px;
+
+}
+
+td {
+    border: 1px solid #1f1f1d;
+    padding: 15px;
+}
+
+th {
+    border: 1px solid #f6ded4;
+    padding: 15px;
+}
+
+thead {
+    background-color: #1f1f1d;
+    color: #f6ded4;
+}
+
+thead th:first-child {
+    border-top-left-radius: 10px;
+}
+
+thead th:last-child {
+    border-top-right-radius: 10px;
+}
+
+table img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+}
+
+table .produits,
+table .category,
+table .prix {
+    text-align: center;
+}
+
+#panier td {
+    text-align: center;
+}
+
+.table-container {
+    /*   cacher ce qui dépasse  
+overflow: hidden; */
+    overflow-x: auto;
+}
+
+/* .table-container {
+    border: 1px solid #1f1f1d;
+    border-radius: 20px;
+    overflow: hidden;
+} */
+
+
+/* Css formulaire */
+form {
+    background-color: #f6ded4;
+    padding: 20px;
+    width: 500px;
+    border: 1px solid rgb(148, 148, 148);
+    border-radius: 2%;
+    margin: 40px auto;
+}
+
+@media (max-width: 768px) {
+    form {
+        width: 100%;
+    }
+}
+
+form h2 {
+    margin: 0 0 10px 0;
+    text-align: center;
+}
+
+fieldset {
+    border: 1px solid rgb(148, 148, 148);
+    padding: 20px 40px;
+    border-radius: 2%;
+    margin-bottom: 20px;
+}
+
+form div {
+    margin-bottom: 10px;
+}
+
+fieldset legend {
+    font-weight: 600;
+    padding: 10px;
+}
+
+form label {
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 2px;
+}
+
+form .cgv-news {
+    font-weight: 300;
+    font-size: 12px;
+}
+
+select,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    background-color: #f6ded4;
+    border: 1px solid rgb(148, 148, 148);
+    border-radius: 6px;
+}
+
+.formulaire #name {
+    border: 2px dotted red;
+}
+
+
+button {
+    background-color: #1f1f1d;
+    color: #f6ded4;
+    padding: 15px 40px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    display: block;
+    margin: 0 auto;
+}
+
+button:hover {
+    text-decoration: underline;
+    background-color: #f6ded4;
+    color: #1f1f1d;
+    border: 1px solid #1f1f1d;
+}
+
+button:active {
+    font-size: 12px;
+}
+
+fieldset input[type="radio"],
+fieldset input[type="checkbox"] {
+    margin-right: 6px;
+    accent-color: #1f1f1d;
+}
+
+.form-row {
+    display: flex;
+    gap: 15px;
+    /* Espace entre le bloc Nom et le bloc Prénom */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    /* Label au-dessus, input en dessous */
+    flex: 1;
+    /* Sépare l'espace de façon égale 50/50 */
+}
+
+input:focus {
+    border: 2px solid #1f1f1d;
+    outline: none;
+}
+
+/* css articles */
+.product-card {
+    background-color: #fcece6;
+    box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 10%);
+    padding: 20px 0;
+    width: 350px;
+    border-radius: 2%;
+    margin: 20px auto;
+    height: auto;
+    text-align: center;
+}
+
+.product-card h3 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.product-card span {
+    font-weight: 600;
+    color: rgb(211, 34, 181);
+}
+
+.product-card p {
+    margin: 10px 20px;
+}
+
+/* .product-card .prix {
+    font-size: 18px;
+    font-weight: 800;
+    margin-top: 0;
+} */
+
+.product-card p:last-of-type {
+    font-size: 18px;
+    font-weight: 800;
+    margin-top: 0;
+}
+
+.product-card img {
+    border-radius: 10px;
+    max-width: 300px;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+/* Conteneur flex */
+.product-container {
+    /* Propriété principale de flexbox pour aligner verticalement*/
+    display: flex;
+    /* Changer l'axe de flexbox : flex-direction : row - column - reverse... */
+    /* permet d'empiler en responsive */
+    flex-wrap: wrap;
+    /* justify-content : center, flex-start, flex-end, space-around, space-between  */
+}
+
+/* .product-container {
+    Propriété principale de flexbox pour aligner horizontalement
+    display: flex;
+    Changer l'axe de flexbox : flex-direction : row - column - reverse... 
+    permet d'empiler en responsive
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+} */
+
+
+/* grid css */
+.product-container {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr;  (fr: fraction = pour avoir des colonnes égales */
+    grid-template-columns: repeat(3, 1fr);
+    /* Positionner les éléments dans leurs cellules */
+    align-items: center;
+    align-content: center;
+    /* déplacer la grille entière */
+    justify-content: center;
+    justify-items: center;
+}
+
+.product-5 {
+    align-self: flex-end;
+}
+
+.category-card {
+    background-color: #fcece6;
+    box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 10%);
+    width: 200px;
+    border-radius: 4%;
+    margin: 20px 20px;
+    height: auto;
+    text-align: center;
+}
+
+.category-card:hover {
+    box-shadow: 2px 2px 2px 1px rgb(0 0 0 / 40%);
+}
+
+.category-card p {
+    font-size: 18px;
+    font-weight: 600;
+    margin: 12px 0 15px 0;
+}
+
+.category-card p:hover {
+    font-weight: bolder;
+}
+
+.img-category {
+    border-top-left-radius: 4%;
+    border-top-right-radius: 4%;
+    width: 200px;
+    height: 160px;
+    object-fit: cover;
+}
+
+.category-container {
+    /* Propriété principale de flexbox */
+    display: flex;
+    /* Changer l'axe de flexbox : flex-direction : row - column - reverse... */
+    /* permet d'empiler en responsive */
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.category-container a {
+    color: #1f1f1d;
+}
+
+aside {
+    background-color: #fcece6;
+    border-radius: 5px;
+    max-width: 1200px;
+    padding: 20px 50px;
+    margin: 50px auto;
+}
+
+
+.promotion-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+    .promotion-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+.top-page {
+    width: 50px;
+    height: 50px;
+    /* 📌 ANCRAGE EN FIXE À DROITE */
+    position: fixed;
+    /* Décolle le bloc du flux pour le fixer à l'écran */
+    bottom: 30px;
+    /* Distance par rapport au bas de l'écran */
+    right: 50px;
+    /* Distance par rapport à la droite de l'écran */
+    z-index: 999;
+    /* Assure que le bouton passe au-dessus de tout le reste du site */
+}
+
+
+.top-page a {
+    width: 100%;
+    height: 100%;
+    color: #f6ded4;
+    font-size: 25px;
+    background-color: #1f1f1d;
+    border: 1px solid #f6ded4;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    border-radius: 100%;
+}
+
+.top-page a:hover {
+    font-size: 28px;
+    text-decoration: none;
+}
+
+/* 
+.product-card p : tous les p enfants de l'élément class product card
+.product-card > p : p enfant direct de l'élément class product card (Qui est directement dans l'élément product-card et 
+non dans une div interieur par exemple)
+.product-card + p : élément frère p suivant de l'élément class product card (<article></><p>)
+
+:hover : au survol
+:focus : élément sélectionné
+:active : pendant le clic
+*/
